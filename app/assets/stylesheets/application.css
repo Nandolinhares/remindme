@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+/*LOGIN*/
+#h1-login{text-align: center;}
+.botao_login{
+	margin: 0 auto;
+ 	display: table;
+ 	font-size: 18px;
+ 	font-weight: bold;
+ 	border-radius: 18px;
+ 	padding-right: 10%;
+ 	padding-left: 10%;
+ }
+ .logo-login, .links{
+ 	margin: 0 auto;
+ 	display: table;
+ }
+ .links{margin-top: 14px; font-weight: bold;}
+.botao_login{border-color: #f48642; background: #fff; color: #428bca;}
