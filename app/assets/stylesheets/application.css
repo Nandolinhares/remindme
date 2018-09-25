@@ -15,8 +15,8 @@
  */
 
 /*LOGIN*/
-#h1-login{text-align: center;}
-.botao_login{
+#h1-login, .h2_title{text-align: center;}
+.botao_login, .botao_signup{
 	margin: 0 auto;
  	display: table;
  	font-size: 18px;
@@ -30,4 +30,5 @@
  	display: table;
  }
  .links{margin-top: 14px; font-weight: bold;}
-.botao_login{border-color: #f48642; background: #fff; color: #428bca;}
+.botao_login, .botao_signup{border-color: #f48642; background: #fff; color: #428bca;}
+.botao_signup{margin-top:15px;}
