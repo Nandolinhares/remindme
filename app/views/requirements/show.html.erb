@@ -15,14 +15,10 @@
   <%= @requirement.description %>
 </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @requirement.type %>
-</p>
 
 <p>
   <strong>Database:</strong>
-  <%= @requirement.database %>
+  <%= @requirement.database.name %>
 </p>
 
 <%= link_to 'Edit', edit_requirement_path(@requirement) %> |

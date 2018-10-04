@@ -20,5 +20,12 @@
   <%= @database.date %>
 </p>
 
+<p>
+	<strong>Requisitos</strong>
+	<% @database.requirements.each do |requirement| %>
+		<%= requirement.name %> <br>
+	<% end %>
+</p>
+
 <%= link_to 'Edit', edit_database_path(@database) %> |
 <%= link_to 'Back', databases_path %>
