@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181004135009) do
+ActiveRecord::Schema.define(version: 20181030205325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "atributos", force: :cascade do |t|
+    t.string "name"
+    t.bigint "requirement_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["requirement_id"], name: "index_atributos_on_requirement_id"
+  end
 
   create_table "databases", force: :cascade do |t|
     t.string "name"
@@ -31,6 +39,7 @@ ActiveRecord::Schema.define(version: 20181004135009) do
     t.bigint "database_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "atributo"
     t.index ["database_id"], name: "index_requirements_on_database_id"
   end
 
@@ -46,5 +55,6 @@ ActiveRecord::Schema.define(version: 20181004135009) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "atributos", "requirements"
   add_foreign_key "requirements", "databases"
 end

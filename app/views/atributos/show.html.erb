@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @atributo.name %>
+</p>
+
+<p>
+  <strong>Requirement:</strong>
+  <%= @atributo.requirement %>
+</p>
+
+<%= link_to 'Edit', edit_atributo_path(@atributo) %> |
+<%= link_to 'Back', atributos_path %>

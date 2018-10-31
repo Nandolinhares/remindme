@@ -15,10 +15,12 @@ class RequirementsController < ApplicationController
   # GET /requirements/new
   def new
     @requirement = Requirement.new
+    @atributos = Atributo.all
   end
 
   # GET /requirements/1/edit
   def edit
+     @atributos = Atributo.all
   end
 
   # POST /requirements
@@ -69,6 +71,6 @@ class RequirementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requirement_params
-      params.require(:requirement).permit(:name, :priority, :description, :type, :database_id)
+      params.require(:requirement).permit(:name, :priority, :description, :type, :database_id, atributo:[])
     end
 end

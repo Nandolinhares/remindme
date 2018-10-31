@@ -11,27 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :requirement_name %>
+  <div class="form-group">
+    <%= form.label :name, "Nome" %>
+    <%= form.text_field :name, id: :requirement_name , class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :priority %>
-    <%= form.number_field :priority, id: :requirement_priority %>
+  <div class="form-group">
+    <%= form.label :priority, "Prioridade" %>
+    <%= form.number_field :priority, id: :requirement_priority , class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :requirement_description %>
+  <div class="form-group">
+    <%= form.label :description, "Descrição" %>
+    <%= form.text_area :description, id: :requirement_description , class:"form-control"%>
   </div>
 
-  <div class="field">
-    <%= form.label :database_id %>
-    <%= form.text_field :database_id, id: :requirement_database_id %>
+  <div class="form-group">
+    <%= form.label :database_id, "Database Id" %>
+    <%= form.text_field :database_id, id: :requirement_database_id , class:"form-control"%>
+  </div>
+  <div class="form-group">
+    <%= label_tag 'atributo1','atributo_1'%>
+    <%= check_box_tag 'requirement[atributo][]', 'atributo_1', checked('atributo_1'), id:'atributo1' %>
+
+    <%= label_tag 'atributo2','atributo_2'%>
+    <%= check_box_tag 'requirement[atributo][]', 'atributo_2', checked('atributo_2'), id:'atributo2' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Criar", class:"btn btn-primary botao-table"%>
   </div>
 <% end %>
