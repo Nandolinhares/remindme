@@ -71,6 +71,6 @@ class RequirementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requirement_params
-      params.require(:requirement).permit(:name, :priority, :description, :type, :database_id, atributo:[])
+      params.require(:requirement).permit(:name, :priority, :description, :type, :database_id, atributo:[],flag:[])
     end
 end

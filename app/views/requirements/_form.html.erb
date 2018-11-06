@@ -30,13 +30,64 @@
     <%= form.label :database_id, "Database Id" %>
     <%= form.text_field :database_id, id: :requirement_database_id , class:"form-control"%>
   </div>
-  <div class="form-group">
-    <%= label_tag 'atributo1','atributo_1'%>
-    <%= check_box_tag 'requirement[atributo][]', 'atributo_1', checked('atributo_1'), id:'atributo1' %>
+  <div class="form-group form_checkbox">
+    <div class="row">
+     <div class="col-md-3">
+        <%= label_tag 'Confiabilidade','Confiabilidade'%>
+        <%= check_box_tag 'requirement[atributo][]', 'Confiabilidade', checked('confiabilidade'), id:'confiabilidade' %>
+     </div>
 
-    <%= label_tag 'atributo2','atributo_2'%>
-    <%= check_box_tag 'requirement[atributo][]', 'atributo_2', checked('atributo_2'), id:'atributo2' %>
+     <div class="col-md-3">
+      <%= label_tag 'Integridade','Integridade'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Integridade', checked('integridade'), id:'integridade' %>
+     </div>
+
+     <div class="col-md-3">       
+      <%= label_tag 'Disponibilidade','Disponibilidade'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Disponibilidade', checked('disponibilidade'), id:'disponibilidade' %>
+     </div>
+     <div class="col-md-3">
+      <%= label_tag 'Software','Software'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Software', checked('software'), id:'software' %>
+     </div>
+   </div>
+
+    <div class="row">
+     <div class="col-md-3">
+        <%= label_tag 'Hardware','Hardware'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Hardware', checked('hardware'), id:'hardware' %>
+     </div>
+
+     <div class="col-md-3">
+      <%= label_tag 'Pessoas','Pessoas'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Pessoas', checked('pessoas'), id:'pessoas' %>
+     </div>
+
+     <div class="col-md-3">    
+      <%= label_tag 'Base de Dados','Base de Dados'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Base de Dados', checked('base_dados'), id:'base_dados' %>
+     </div>
+     <div class="col-md-3">
+      <%= label_tag 'Documentos','Documentos'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Documentos', checked('documentos'), id:'documentos' %>
+     </div>
+   </div>
+
+   <div class="row">
+      
+
+      <%= label_tag 'Funcional','Funcional'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Funcional', checked('funcional'), id:'funcional' %>
+
+      
+      <%= label_tag 'Não-Funcional','Não Funcional'%>
+      <%= check_box_tag 'requirement[atributo][]', 'Não Funcional', checked('naofuncional'), id:'naofuncional' %>
+
+
   </div>
+
+
+  
 
   <div class="actions">
     <%= form.submit "Criar", class:"btn btn-primary botao-table"%>

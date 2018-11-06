@@ -5,4 +5,6 @@ class Requirement < ApplicationRecord
   before_save do
   	self.atributo.gsub!(/[\[\]\"]/,"") if attribute_present?("atributo")
   end
+
+
 end
