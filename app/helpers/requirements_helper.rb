@@ -3,3 +3,4 @@ module RequirementsHelper
 		@requirement.atributo.nil? ? false : @requirement.atributo.match(area)
 	end	
 end
+ 

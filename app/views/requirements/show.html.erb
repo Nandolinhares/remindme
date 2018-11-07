@@ -1,31 +1,72 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @requirement.name %>
+<h4><strong>Projeto: <%= @requirement.database.name %></strong></h4>
+
+<fieldset class="panel panel-default">
+
+<h1 class="h1-pages"><%= @requirement.name %></h1> <br><br>
+
+
+<!--<div class="row">
+  <div class="col-md-12">
+    <span class="span-pages"><strong>Prioridade</strong>:</span>
+    <a href="javascript:void(0);" class="btn btn-primary"><%= @requirement.priority %></a>
+  </div>
+</div> -->
+<div class="row">
+
+  <div class="col-md-7">
+    <h4><strong>Descrição</strong>: <%= @requirement.description %></h4>
+  </div>
+
+  <div class="col-md-5 priority-pages">
+
+    <h4><strong>Prioridade:</strong></h4>
+
+    <%if @requirement.priority == 1 %>
+      
+      <div class="stars">
+        <%= image_tag("star.png", alt:"star1") %>
+      </div>
+
+    <% elsif @requirement.priority == 2 %>
+      <div class="stars">
+        <%= image_tag("star.png", alt:"star1") %>
+        <%= image_tag("star.png", alt:"star1") %>
+      </div>
+
+    <% elsif @requirement.priority == 3 %>
+      <div class="stars">
+        <%= image_tag("star.png", alt:"star1") %>
+        <%= image_tag("star.png", alt:"star1") %>
+        <%= image_tag("star.png", alt:"star1") %>
+      </div>
+
+    <% elsif @requirement.priority == 4 %>
+      <div class="stars">
+        <%= image_tag("star.png", alt:"star1") %>
+        <%= image_tag("star.png", alt:"star1") %>
+        <%= image_tag("star.png", alt:"star1") %>
+        <%= image_tag("star.png", alt:"star1") %>
+      </div>
+
+    <% elsif @requirement.priority == 5 %>
+        <div class="stars">
+          <%= image_tag("star.png", alt:"star1") %>
+          <%= image_tag("star.png", alt:"star1") %>
+          <%= image_tag("star.png", alt:"star1") %>
+          <%= image_tag("star.png", alt:"star1") %>
+          <%= image_tag("star.png", alt:"star1") %>
+        </div>
+   <% end %>
+  </div>
+</div>
+
+<h4><strong>Atributos</strong>:</h4>
+<p class="atributos">
+  <%= @requirement.atributo %>
 </p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @requirement.priority %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @requirement.description %>
-</p>
-
-
-<p>
-  <strong>Database:</strong>
-  <%= @requirement.database.name %>
-</p>
-
-<p>
-	<strong>Atributos</strong>
-	<%= @requirement.atributo %>
-</p>
-
+</fieldset>
 
 <%= link_to 'Edit', edit_requirement_path(@requirement) %> |
-<%= link_to 'Back', requirements_path %>
+<%= link_to 'Back', databases_path %>

@@ -36,25 +36,67 @@
 	background: #f48642; 
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-	color: #fff !important;
+/* Header */
+
+header ul{
+	font-size: 22px;
+
 }
-.navbar-default .navbar-nav > li > a{
-	color: #fff !important;
-	font-size: 18px; 
+header ul li{
+	display: inline;
+	padding-right: 1%;
+} 
+
+header a:hover{
+	background: none;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
-	background-color: #888888;
+header ul li a:hover{
+	color: #333131;
+	text-decoration: none;
 }
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
-	color: #fff;
+
+.menu_top{
+	margin-top: 3.5%;
+	margin-left: -10%;
 }
-.navbar-brand{
-	color: #fff !important;
-}
+
 .botao-table{
 	color: #fff !important;
 	font-weight: bold;
 }
 
+.logo{
+	margin-top: 10px;
+}
+
+.main-template{
+	margin-top: 5vw;
+}
+
+/* Pages */
+
+.h1-pages{
+	text-align: center;
+}
+
+.atributos{
+	font-size: 18px;
+}
+
+.span-pages{
+	font-size: 18px;
+}
+
+.stars img{
+	width: 40px;
+}
+
+.priority-pages h4{
+	text-align: center;
+}
+
+.priority-pages .stars{
+	margin: 0 auto;
+	display: table;
+}

@@ -1,30 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @database.name %>
-</p>
+<h1 class="h1-pages"><%= @database.name %></h1><br>
+
+
+<h4><strong>Autor</strong>: <%= @database.author %></h4>
+<h4><strong>Descrição</strong>: <%= @database.description %></h4>
+<h4><strong>Data</strong>: <%= @database.date %></h4><br><br>
+
 
 <p>
-  <strong>Author:</strong>
-  <%= @database.author %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @database.description %>
-</p>
+  <h4><strong>Requisitos:</strong></h4>
+	
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Prioridade</th>
+        <th>Descrição</th>
+        <th>Atributos</th>
+      </tr>
+    </thead>
 
-<p>
-  <strong>Date:</strong>
-  <%= @database.date %>
+    <tbody>
+      <% @database.requirements.each do |requirement| %>
+        <tr>
+          <td><%= requirement.id %></td>
+          <td><%= requirement.name %> </td>
+          <td><%= requirement.priority %></td>
+          <td><%= requirement.description %></td>
+          <td><%= requirement.atributo %></td>
+          <td><%= link_to 'Ver', requirement, class:"btn btn-info botao-table" %></td>
+          <td><%= link_to 'Editar', edit_requirement_path(requirement), class:"btn btn-info botao-table" %></td>
+          <td><%= link_to 'Excluir', requirement, method: :delete, data: { confirm: 'Tem certeza?' }, class:"btn btn-info botao-table" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </p>
-
 <p>
-	<strong>Requisitos</strong>
-	<% @database.requirements.each do |requirement| %>
-		<%= requirement.name %> <br>
-	<% end %>
+  <%= link_to 'Adicionar Requisitos', new_requirement_path, class:"btn btn-primary botao-table" %>
 </p>
 
 <%= link_to 'Edit', edit_database_path(@database) %> |

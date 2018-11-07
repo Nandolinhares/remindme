@@ -5,6 +5,7 @@
 <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
+      <th>Id</th>
       <th>Nome</th>
       <th>Autor</th>
       <th>Descrição</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @databases.each do |database| %>
       <tr>
+        <td><%= database.id %></td>
         <td><%= database.name %></td>
         <td><%= database.author %></td>
         <td><%= database.description %></td>

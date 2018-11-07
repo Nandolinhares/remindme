@@ -10,17 +10,20 @@ class RequirementsController < ApplicationController
   # GET /requirements/1
   # GET /requirements/1.json
   def show
+    @requirements = Requirement.all
   end
 
   # GET /requirements/new
   def new
     @requirement = Requirement.new
     @atributos = Atributo.all
+    @databases = Database.all
   end
 
   # GET /requirements/1/edit
   def edit
      @atributos = Atributo.all
+     @databases = Database.all
   end
 
   # POST /requirements
