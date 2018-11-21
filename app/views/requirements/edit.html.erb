@@ -1,6 +1,8 @@
-<h1>Editing Requirement</h1>
+<h1>Editar Requisito</h1>
 
 <%= render 'form', requirement: @requirement %>
 
-<%= link_to 'Show', @requirement %> |
-<%= link_to 'Back', databases_path %>
+<div class="botoes-secundarios">
+	<%= link_to 'Ver', @requirement, class:"btn btn-success botao-table" %> |
+	<%= link_to 'Voltar', databases_path, class:"btn btn-warning botao-table" %>
+</div>

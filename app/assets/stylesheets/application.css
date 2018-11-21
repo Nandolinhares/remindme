@@ -38,6 +38,11 @@
 
 /* Header */
 
+.notifications{
+	margin: 0 auto;
+	display: table;
+}
+
 header ul{
 	font-size: 22px;
 
@@ -99,4 +104,14 @@ header ul li a:hover{
 .priority-pages .stars{
 	margin: 0 auto;
 	display: table;
+}
+
+.botao-voltar{
+	margin-left: 100px;
+	margin-top: -74px;	
+}
+
+.botoes-secundarios{
+	margin-left: 100px;
+	margin-top: -44px;
 }
